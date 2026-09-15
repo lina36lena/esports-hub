@@ -1,32 +1,79 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esports Hub - Главная</title>
+    <title>ESPORTS HUB - Discover & Compete</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="tournaments.html">Турниры</a></li>
-                <li><a href="teams.html">Команды</a></li>
-                <li><a href="news.html">Новости</a></li>
-                <li><a href="about.html">О нас</a></li>
-                <li><a href="contact.html">Контакты</a></li>
-            </ul>
-        </nav>
+
+    <!-- STICKY NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" onclick="navigateTo('home')">
+                <span class="logo-icon"><i class="fa-solid fa-gamepad"></i></span>
+                <span class="logo-text">ESPORTS<span class="neon-text">HUB</span></span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#" class="nav-item active" id="nav-home" onclick="navigateTo('home')">HOME</a>
+                <a href="#" class="nav-item" id="nav-tournaments" onclick="navigateTo('tournaments')">TOURNAMENTS</a>
+                <a href="#" class="nav-item" id="nav-games" onclick="navigateTo('games')">GAMES</a>
+                <a href="#" class="nav-item" id="nav-news" onclick="navigateTo('news')">NEWS</a>
+                <a href="#" class="nav-item" id="nav-howitworks" onclick="navigateTo('howitworks')">HOW IT WORKS</a>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="global-search" placeholder="Search tournaments..." oninput="handleGlobalSearch(this.value)">
+                </div>
+                <button class="btn btn-login"><i class="fa-solid fa-user"></i> LOGIN</button>
+            </div>
+        </div>
     </header>
-    <main>
-        <section class="hero">
-            <h1>Добро пожаловать на Esports Hub</h1>
-            <p>Главный портал о киберспорте, турнирах и командах!</p>
-        </section>
+
+    <!-- MAIN VIEW CONTAINER -->
+    <main id="app-view">
+        <!-- Content dynamically injected via main.js -->
     </main>
-    <footer>
-        <p>&copy; 2026 Esports Hub. Все права защищены.</p>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span class="logo-text">ESPORTS<span class="neon-text">HUB</span></span>
+                </a>
+                <p>The ultimate discovery platform for global esports tournaments, live statistics, and prize pool tracking.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <a href="#" onclick="navigateTo('home')">Home</a>
+                <a href="#" onclick="navigateTo('tournaments')">Tournaments</a>
+                <a href="#" onclick="navigateTo('games')">Games</a>
+                <a href="#" onclick="navigateTo('news')">News</a>
+            </div>
+            <div class="footer-socials">
+                <h4>Connect</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-twitch"></i></a>
+                    <a href="#"><i class="fa-brands fa-discord"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ESPORTS HUB. All rights reserved. Designed for Astana IT University Project.</p>
+        </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
